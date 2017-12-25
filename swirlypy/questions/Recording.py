@@ -22,6 +22,7 @@ class RecordingQuestion(ShellQuestion):
          """
         console = self.new_console(data)
         for value in console.interact(""):
+            print("")   # IPython needs another return here.
             yield value
       
     @abc.abstractmethod       

@@ -51,3 +51,5 @@ coverage.xml
 # Sphinx documentation
 docs/_build/
 
+# Courses in progress
+courses/swirl_ports

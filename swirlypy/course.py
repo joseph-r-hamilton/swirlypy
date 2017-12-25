@@ -119,9 +119,12 @@ class Course:
         while True:
             # Present the menu.
             self.menu()
+            print("0: Exit swirlypy\n")
             try:
                 colors.print_inst("Selection: ", end="")
                 identifier = input().strip()
+                if (identifier == '0'):
+                    raise EOFError
                 self.execute_lesson(identifier)
             except NoSuchLessonException:
                 colors.print_err("No lesson: %s" % identifier)
